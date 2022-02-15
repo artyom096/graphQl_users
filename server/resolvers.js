@@ -4,10 +4,10 @@ const root = {
   getAllUsers: () => {
     return users;
   },
-  getUser: (id) => {
+  getUser: ({ id }) => {
     return users.filter((user) => user.id === id);
   },
-  createUser: (input) => {
+  createUser: ({ input }) => {
     const user = {
       id: Date.now(),
       username: input.username,
